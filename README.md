@@ -63,7 +63,7 @@
     <img src="https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white"/>
   </a>
 
-  <a href="https://linkedin.com/in/setegnmuluken@21">
+  <a href="https://linkedin.com/in/muluken-setegn-2127ma">
     <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"/>
   </a>
 
