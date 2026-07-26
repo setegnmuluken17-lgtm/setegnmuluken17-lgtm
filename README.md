@@ -15,7 +15,9 @@
 🏫 I'm currently studying Information Systems at Bahir Dar University.  
 💻 I'm a passionate developer working on both front-end and back-end (full stack) technologies.  
 🌱 Currently learning: Python, Django, React, and AI basics.  
-
+[![GitHub followers](https://img.shields.io/github/followers/setegnmuluken17-lgtm?style=for-the-badge&logo=github)](https://github.com/setegnmuluken17-lgtm?tab=followers)
+[![GitHub User's stars](https://img.shields.io/github/stars/setegnmuluken17-lgtm?affiliations=OWNER&style=for-the-badge)](https://github.com/setegnmuluken17-lgtm?tab=repositories)
+![](https://komarev.com/ghpvc/?username=setegnmuluken17-lgtm&style=for-the-badge)
 ---
 
 ## 🚀 Skills
