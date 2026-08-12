@@ -54,10 +54,7 @@
 <h2 align="center">🧠 Most Used Languages</h2>
 
 <p align="center">
-  <img
-    src="https://github-readme-stats.vercel.app/api/top-langs/?username=setegnmuluken17-lgtm&layout=compact&theme=tokyonight"
-    alt="Most Used Languages"
-  />
+  <img src="https://github-stats-extended.vercel.app/api/top-langs/?username=setegnmuluken17-lgtm&layout=compact&theme=tokyonight" />
 </p>
 
 ## 📫 Contact Me
