@@ -5,6 +5,13 @@
 <p align="center">
   <img src="https://readme-typing-svg.herokuapp.com/?lines=Hello+there,+I'm+Muluken+Setegn;Welcome+to+my+GitHub+Profile!&center=true&width=500&height=45">
 </p>
+<p align="center">
+  <img
+    src="./assets/ascii-animation.gif"
+    width="550"
+    alt="Animated ASCII artwork"
+  />
+</p>
 
 <h3 align="center">💻 Full Stack Developer | 🚀 Tech Enthusiast</h3>
 
