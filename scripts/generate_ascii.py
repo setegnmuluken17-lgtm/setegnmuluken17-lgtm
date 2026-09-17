@@ -6,14 +6,11 @@ SOURCE = "assets/source.png"
 OUTPUT = "assets/ascii-animation.gif"
 
 ASCII_CHARS = "@#8&o:*. "
-WIDTH = 80
+WIDTH = 50
 FONT_SIZE = 10
 
-# Number of animation frames
-FRAMES = 35
-
-# Speed of each frame in milliseconds
-FRAME_DURATION = 70
+FRAMES = 40
+FRAME_DURATION = 80
 
 
 def convert_to_ascii(image):
@@ -33,8 +30,13 @@ def convert_to_ascii(image):
         for x in range(WIDTH):
             pixel = pixels[y * WIDTH + x]
 
+            # INVERT brightness
+            # Dark = space
+            # Bright = ASCII character
+            brightness = 255 - pixel
+
             index = int(
-                pixel / 255 * (len(ASCII_CHARS) - 1)
+                brightness / 255 * (len(ASCII_CHARS) - 1)
             )
 
             line += ASCII_CHARS[index]
@@ -44,7 +46,7 @@ def convert_to_ascii(image):
     return lines
 
 
-def create_frame(lines, visible_lines, frame_number):
+def create_frame(lines, visible_lines, glitch=False):
 
     width = max(len(line) for line in lines)
     height = len(lines)
@@ -65,19 +67,22 @@ def create_frame(lines, visible_lines, frame_number):
     except:
         font = ImageFont.load_default()
 
-    # Draw only from TOP to BOTTOM
-    for y in range(min(visible_lines, height)):
+    # Only show lines from TOP to BOTTOM
+    for y in range(visible_lines):
 
-        for x, char in enumerate(lines[y]):
+        line = lines[y]
 
+        for x, char in enumerate(line):
+
+            # Don't draw spaces
             if char == " ":
                 continue
 
             # Small glitch effect
-            if random.random() < 0.02:
+            if glitch and random.random() < 0.015:
                 char = random.choice("@#$%&*+=-:.")
 
-            brightness = random.randint(170, 255)
+            brightness = random.randint(180, 255)
 
             draw.text(
                 (
@@ -113,7 +118,10 @@ def main():
 
     frames = []
 
-    # TOP → BOTTOM animation
+    # --------------------------------
+    # TOP → BOTTOM REVEAL
+    # --------------------------------
+
     for frame_number in range(FRAMES):
 
         progress = (frame_number + 1) / FRAMES
@@ -125,20 +133,28 @@ def main():
         frame = create_frame(
             lines,
             visible_lines,
-            frame_number
+            glitch=True
         )
 
         frames.append(frame)
 
-    # Keep the completed image for a moment
-    for _ in range(8):
-        frames.append(
-            create_frame(
-                lines,
-                total_lines,
-                FRAMES
-            )
+    # --------------------------------
+    # HOLD COMPLETE IMAGE
+    # --------------------------------
+
+    for _ in range(10):
+
+        frame = create_frame(
+            lines,
+            total_lines,
+            glitch=True
         )
+
+        frames.append(frame)
+
+    # --------------------------------
+    # SAVE GIF
+    # --------------------------------
 
     frames[0].save(
         OUTPUT,
@@ -148,7 +164,9 @@ def main():
         loop=0
     )
 
-    print(f"Created: {OUTPUT}")
+    print(
+        f"Created: {OUTPUT}"
+    )
 
 
 if __name__ == "__main__":
