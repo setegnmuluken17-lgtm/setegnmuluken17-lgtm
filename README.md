@@ -8,7 +8,7 @@
 <p align="center">
   <img
     src="./assets/ascii-animation.gif"
-    width="550"
+    width="350"
     alt="Animated ASCII artwork"
   />
 </p>
