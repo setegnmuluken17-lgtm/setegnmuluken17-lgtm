@@ -142,7 +142,7 @@ def main():
     # HOLD COMPLETE IMAGE
     # --------------------------------
 
-    for _ in range(10):
+    for _ in range(30):
 
         frame = create_frame(
             lines,
@@ -161,7 +161,7 @@ def main():
         save_all=True,
         append_images=frames[1:],
         duration=FRAME_DURATION,
-        loop=0
+        
     )
 
     print(
