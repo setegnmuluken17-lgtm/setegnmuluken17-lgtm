@@ -1,4 +1,4 @@
-# Muluken-Setegn
+<h1 align="center"># Muluken-Setegn</h1>
 
 <h1 align="center">👋 Hello there, I'm Muluken Setegn</h1>
 
