@@ -6,7 +6,7 @@ SOURCE = "assets/source.png"
 OUTPUT = "assets/ascii-animation.gif"
 
 ASCII_CHARS = "@#8&o:*. "
-WIDTH = 50
+WIDTH = 55
 FONT_SIZE = 10
 
 FRAMES = 40
