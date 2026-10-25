@@ -98,7 +98,14 @@
   <img src="https://raw.githubusercontent.com/setegnmuluken17-lgtm/setegnmuluken17-lgtm/output/github-contribution-grid-snake.svg" />
 </p>
 
+
 <h2 align="center">📈 Contribution Graph</h2>
+
 <p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=setegnmuluken17-lgtm&theme=tokyo-night&hide_border=true" />
+  <img
+    src="https://github-readme-activity-graph.vercel.app/graph?username=setegnmuluken17-lgtm&theme=tokyo-night&hide_border=true"
+    alt="GitHub contribution activity graph"
+    width="100%"
+  />
 </p>
+
